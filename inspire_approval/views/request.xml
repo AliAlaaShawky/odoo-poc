@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <record id="view_purchase_order_form_inherit" model="ir.ui.view">
+            <field name="name">purchase.order.form.inherit</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='purchase_delivery_invoice']" position="after">
+               
+                <page  string="Approvers">
+                    <group string="Approval Request">
+                    <group><field name="approval_request_id"/></group>
+                    <group> <field name="approval_request_status"/></group>
+                        
+                        <field name="current_user_name" invisible='1'/>
+                       
+                    </group>
+                    <group>
+                    <field name="current_user_status"/>
+                    </group>
+                    <group>
+                        <field name="approver_ids">
+                            <tree string="Approvers">
+                                <field name="user_id"/>
+                                <field name="status"/>
+                                <field name="sequence"/>
+                                <field name="required"/>
+                            </tree>
+                        </field>
+                    </group>
+                    </page>
+                
+                        
+                </xpath>
+                
+            </field>
+        </record>
+        
+    </data>
+        
+    
+</odoo>

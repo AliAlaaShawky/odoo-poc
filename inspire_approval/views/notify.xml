@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+<record id="mail_act_activity" model="mail.activity.type">
+    <field name="name">purchase order</field>
+     <field name="res_model">purchase.order</field>
+</record>
+    </data>
+</odoo>
+
+
