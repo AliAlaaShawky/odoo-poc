@@ -23,7 +23,7 @@
                             <tree string="Approvers">
                                 <field name="user_id"/>
                                 <field name="status"/>
-                                <field name="sequence"/>
+                            <!--  <field name="sequence"/> -->
                                 <field name="required"/>
                             </tree>
                         </field>
