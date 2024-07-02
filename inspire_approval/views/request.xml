@@ -5,7 +5,25 @@
             <field name="model">purchase.order</field>
             <field name="inherit_id" ref="purchase.purchase_order_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//notebook/page[@name='products']" position="after" >
+               
+             <xpath expr="//notebook/page[@name='purchase_delivery_invoice']" position="replace" >
+
+                 <page string="Genral Information" name="purchase_delivery_invoice">
+                            <group>
+                                <group name="other_info">
+                                    <field name="user_id" domain="[('share', '=', False)]" widget="many2one_avatar_user"/>
+                                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" readonly="state in ['cancel', 'done', 'purchase']"/>
+                                    <field name="origin"/>
+                                </group>
+                                <group name="invoice_info">
+                                    <field name="invoice_status" invisible="state in ('draft', 'sent', 'to approve', 'cancel')"/>
+                                    <field name="payment_term_id" readonly="invoice_status == 'invoiced' or state == 'done'" options="{'no_create': True}"/>
+                                    <field name="fiscal_position_id" options="{'no_create': True}" readonly="invoice_status == 'invoiced' or state == 'done'"/>
+                                </group>
+                            </group>
+                        </page>
+                 </xpath>
+                 <xpath expr="//notebook/page[@name='products']" position="after" >
                
                 <page  string="Approvers" invisible="state == 'draft'">
                     <group string="Approval Request">
@@ -32,23 +50,6 @@
                 
                         
                 </xpath>
-             <xpath expr="//notebook/page[@name='purchase_delivery_invoice']" position="replace" >
-
-                 <page string="Genral Information" name="purchase_delivery_invoice">
-                            <group>
-                                <group name="other_info">
-                                    <field name="user_id" domain="[('share', '=', False)]" widget="many2one_avatar_user"/>
-                                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" readonly="state in ['cancel', 'done', 'purchase']"/>
-                                    <field name="origin"/>
-                                </group>
-                                <group name="invoice_info">
-                                    <field name="invoice_status" invisible="state in ('draft', 'sent', 'to approve', 'cancel')"/>
-                                    <field name="payment_term_id" readonly="invoice_status == 'invoiced' or state == 'done'" options="{'no_create': True}"/>
-                                    <field name="fiscal_position_id" options="{'no_create': True}" readonly="invoice_status == 'invoiced' or state == 'done'"/>
-                                </group>
-                            </group>
-                        </page>
-                 </xpath>
                 <xpath expr="//field[@name='partner_ref']" position="after">
                     <field name="order_type"/>
                     <field name="approval_scenario_2"/>
