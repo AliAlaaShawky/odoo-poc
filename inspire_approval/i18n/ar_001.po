@@ -157,3 +157,8 @@ msgstr "موضوع الطلب"
 #: model:ir.model.fields,field_description:inspire_approval.field_order_type__responsible
 msgid "Responsible"
 msgstr "المسؤل"
+
+ #. module: inspire_approval
+#: model_terms:ir.ui.view,arch_db:inspire_approval.view_purchase_order_form_inherit
+msgid "Genral Information"
+msgstr "بيانات الطلب"

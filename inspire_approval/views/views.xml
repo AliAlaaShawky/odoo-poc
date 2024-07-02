@@ -24,7 +24,7 @@
 
                 </xpath>
             <xpath expr="//button[@id='draft_confirm']" position="attributes">
-                    <attribute name="invisible"> approval_request_status  not in ['approved', 'تمت الموافقة'] </attribute>
+                    <attribute name="invisible"> approval_request_status  not in ['approved', 'تمت الموافقة']  </attribute>
                 </xpath>
             
 
