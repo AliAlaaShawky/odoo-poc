@@ -1,19 +1,19 @@
-# -*- coding: utf-8 -*-
+from odoo import models, fields, api
 
-# from odoo import models, fields, api
+class PurchaseOrder(models.Model):
+    _inherit = 'purchase.order'
+    allow_product_domain_id_ids=fields.Many2many('product.template',compute='allow_product_domain_ids')
+    @api.onchange('partner_id')
+    def allow_product_domain_ids(self):
+        for rec in self:
+         all_vendor = self.env['product.template'].search([('seller_ids.partner_id', '=', rec.partner_id.id)])
+         rec.allow_product_domain_id_ids=[(6,0,all_vendor.ids)]
 
 
-# class inspire_approval(models.Model):
-#     _name = 'inspire_approval.inspire_approval'
-#     _description = 'inspire_approval.inspire_approval'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+
+
+
+
+
 

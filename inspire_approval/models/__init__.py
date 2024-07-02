@@ -2,3 +2,4 @@
 
 from . import models 
 from . import approval_request 
+from . import order_type

@@ -1,0 +1,159 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* inspire_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-01 08:12+0000\n"
+"PO-Revision-Date: 2024-07-01 08:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_purchase_order__allow_product_domain_id_ids
+msgid "Allow Product Domain Id"
+msgstr ""
+
+#. module: inspire_approval
+#: model:ir.model,name:inspire_approval.model_approval_request
+#: model_terms:ir.ui.view,arch_db:inspire_approval.view_purchase_order_form_inherit
+msgid "Approval Request"
+msgstr "طلب موافقة "
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_purchase_order__approval_request_status
+msgid "Approval Request Status"
+msgstr "حالة طلب الموافقة"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_order_type__approval_scenario
+#: model:ir.model.fields,field_description:inspire_approval.field_purchase_order__approval_scenario_2
+msgid "Approval Scenario"
+msgstr "سناريو الموافقة"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_purchase_order__approver_ids
+#: model_terms:ir.ui.view,arch_db:inspire_approval.view_purchase_order_form_inherit
+msgid "Approvers"
+msgstr "المسؤولين عن الموافقة"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_order_type__create_uid
+msgid "Created by"
+msgstr "تم انشاؤها بواسطة"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_order_type__create_date
+msgid "Created on"
+msgstr "تم انشاؤها في"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_purchase_order__current_user_name
+msgid "Current User"
+msgstr "المستخدم الحالي"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_order_type__Description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_order_type__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: inspire_approval
+#: model_terms:ir.ui.view,arch_db:inspire_approval.order_type_form
+msgid "General Info"
+msgstr "معلومات عامة"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_order_type__id
+msgid "ID"
+msgstr ""
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_order_type__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث بواسطة"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_order_type__write_date
+msgid "Last Updated on"
+msgstr "اخر تحديث في"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_order_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_purchase_order__order_type
+msgid "Order Type"
+msgstr "نوع الطلب"
+
+#. module: inspire_approval
+#: model:ir.actions.act_window,name:inspire_approval.order_type_action
+msgid "Order Type "
+msgstr "نوع الطلب"
+
+#. module: inspire_approval
+#: model:ir.ui.menu,name:inspire_approval.all_customer
+msgid "Orders Type"
+msgstr "انواع الطلبات"
+
+#. module: inspire_approval
+#: model:ir.model,name:inspire_approval.model_purchase_order
+#: model:ir.model.fields,field_description:inspire_approval.field_approval_request__purchase_order_id
+msgid "Purchase Order"
+msgstr "طلب شراء"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_purchase_order__approval_request_id
+msgid "Request ID"
+msgstr "رقم الطلب"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_purchase_order__current_user_status
+msgid "Your Approval Status"
+msgstr "حالة الطلب الخاص بك"
+
+#. module: inspire_approval
+#: model:ir.model,name:inspire_approval.model_order_type
+msgid "order.type"
+msgstr "نوع الطلب"
+
+#. module: inspire_approval
+#: model:mail.activity.type,name:inspire_approval.mail_act_activity
+msgid "purchase order"
+msgstr "طلب الشراء"
+#. module: inspire_approval
+#: model:mail.activity.type,name:inspire_approval.mail_act_activity_note
+msgid "There are an Approvals request waiting your approval"
+msgstr "يوجد طلبات موافقة في انتظارك"
+
+#. module: inspire_approval
+#: model_terms:ir.ui.view,arch_db:inspire_approval.hrview_inherited
+msgid "Grant Approval"
+msgstr "قبول الطلب"
+
+#. module: inspire_approval
+#: model_terms:ir.ui.view,arch_db:inspire_approval.hrview_inherited
+msgid "Refuse"
+msgstr "رفض الطلب"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_purchase_order__order_subject
+msgid "Order Subject"
+msgstr "موضوع الطلب"
+
+#. module: inspire_approval
+#: model:ir.model.fields,field_description:inspire_approval.field_order_type__responsible
+msgid "Responsible"
+msgstr "المسؤل"

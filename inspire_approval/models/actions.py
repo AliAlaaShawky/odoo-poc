@@ -26,7 +26,7 @@ else:
 approval_request = env['approval.request'].create({
     'name': record.name,  # Use the name of the created purchase order
     'request_owner_id': env.user.id,
-    'category_id': record.x_studio_approval_scenario.id,  # Replace with your approval category ID
+    'category_id': record.approval_scenario_2.id,  # Replace with your approval category ID
     'reason': 'This is an automated approval request.',
 })
 approval_request.write({'request_status': 'pending'})
