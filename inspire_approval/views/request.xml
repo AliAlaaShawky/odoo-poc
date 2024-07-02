@@ -32,8 +32,7 @@
                 
                         
                 </xpath>
-<!--                 <xpath expr="//notebook/page[@name='purchase_delivery_invoice']" position="replace" >
-                <page string="Genral Information" name="purchase_delivery_invoice">
+                 <page string="Genral Information" name="purchase_delivery_invoice">
                             <group>
                                 <group name="other_info">
                                     <field name="user_id" domain="[('share', '=', False)]" widget="many2one_avatar_user"/>
@@ -47,7 +46,6 @@
                                 </group>
                             </group>
                         </page>
-                 </xpath> -->
                 <xpath expr="//field[@name='partner_ref']" position="after">
                     <field name="order_type"/>
                     <field name="approval_scenario_2"/>
