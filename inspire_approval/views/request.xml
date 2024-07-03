@@ -22,6 +22,9 @@
                             </group>
                         </page>
                  </xpath> -->
+                <xpath expr="//notebook/page[@name='purchase_delivery_invoice']" position="attributes">
+                    <attribute name="string">General Information</attribute>
+                </xpath>
                   <xpath expr="//notebook/page[@name='products']" position="after"  >
                
                 <page  string="Approvers"  >
