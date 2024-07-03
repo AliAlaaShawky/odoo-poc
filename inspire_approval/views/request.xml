@@ -24,7 +24,7 @@
                  </xpath>
                   <xpath expr="//notebook/page[@name='products']" position="after"  >
                
-                <page  string="Approvers" >
+                <page  string="Approvers" invisible="True" >
                     <group string="Approval Request">
                     <group><field name="approval_request_id"/></group>
                     <group> <field name="approval_request_status"/></group>
