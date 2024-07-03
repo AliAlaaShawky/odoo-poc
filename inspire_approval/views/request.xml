@@ -6,7 +6,7 @@
             <field name="inherit_id" ref="purchase.purchase_order_form"/>
             <field name="arch" type="xml">
                
-                <xpath expr="//notebook/page[@name='purchase_delivery_invoice']" position="replace" >
+<!--                 <xpath expr="//notebook/page[@name='purchase_delivery_invoice']" position="replace" >
                 <page string="Genral Information" name="purchase_delivery_invoice">
                             <group>
                                 <group name="other_info">
@@ -21,7 +21,7 @@
                                 </group>
                             </group>
                         </page>
-                 </xpath>
+                 </xpath> -->
                   <xpath expr="//notebook/page[@name='products']" position="after"  >
                
                 <page  string="Approvers"  >
