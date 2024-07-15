@@ -1,0 +1,17 @@
+
+<odoo>
+       
+
+         <template id="portal_my_tasks_inherit" inherit_id="project.portal_my_project">
+            <xpath expr="//t[@ t-if='not grouped_tasks']" position="after">
+                <!-- Add a button to create a new task -->
+                <div class="mt16">
+                    <th colspan="8">
+                        <a type="button" class="btn btn-primary mt-3 mb-3"  t-attf-href="/create/task" role="button">
+                            Support Request
+                        </a>
+                    </th>
+                </div>
+            </xpath>
+        </template>
+</odoo>

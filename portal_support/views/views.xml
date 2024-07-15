@@ -1,0 +1,74 @@
+<!-- <odoo>
+
+<template id="create_task_form" name="Create Task Form">
+    <t t-call="website.layout">
+        <div class="container">
+            <form action="/create/task/submit" method="post">
+                <t t-if="project_id">
+                    <input type="hidden" name="project_id" t-att-value="project_id"/>
+                </t>
+                <div class="form-group">
+                    <label for="task_name">Task Name</label>
+                    <input type="text" class="form-control" id="task_name" name="task_name" required="required"/>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="description"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deadline">Deadline</label>
+                    <input type="date" class="form-control" id="deadline" name="deadline"/>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Task</button>
+            </form>
+        </div>
+    </t>
+</template>
+
+</odoo> -->
+<odoo>
+
+<template id="create_task_form" name="Create Task Form">
+    <t t-call="website.layout">
+        <div class="container">
+            <form action="/create/task/submit" method="post">
+                <t t-if="project_id">
+                    <input type="hidden" name="project_id" t-att-value="project_id"/>
+                </t>
+                <div class="form-group">
+                    <label for="task_name">Task Name</label>
+                    <input type="text" class="form-control" id="task_name" name="task_name" required="required"/>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="allowed_projects">Project</label>
+                    <select class="form-control" id="allowed_projects" name="project_id" required="required">
+                        <option value="">Select a project</option>
+                        <t t-foreach="allowed_projects" t-as="project">
+                            <option t-att-value="project.id"><t t-esc="project.name"/></option>
+                        </t>
+                    </select>
+                </div>
+                <!-- <div class="form-group">
+                    <label for="user_id">Assigned to</label>
+                    <select class="form-control" id="user_id" name="user_id">
+                        <t t-foreach="users" t-as="user">
+                            <option t-att-value="user.id"><t t-esc="user.name"/></option>
+                        </t>
+                    </select>
+                </div> -->
+                <div class="form-group">
+                    <label for="deadline">Deadline</label>
+                    <input type="date" class="form-control" id="deadline" name="deadline"/>
+                </div>
+                 <button type="submit" class="btn btn-primary mt-3 mb-3">Create Task</button>
+            </form>
+        </div>
+    </t>
+</template>
+
+</odoo>
