@@ -35,8 +35,9 @@
 # controllers/task_portal.py
 from odoo import http
 from odoo.http import request
+from odoo.addons.project.controllers.portal import ProjectCustomerPortal as PortalCustomerView
 
-class TaskPortal(http.Controller):
+class TaskPortal(PortalCustomerView):
 
     @http.route('/create/task', type='http', auth='user', website=True)
     def create_task_form(self, project_id=None, **kw):
@@ -74,13 +75,29 @@ class TaskPortal(http.Controller):
         request.env['project.task'].sudo().create(task_values)
         return request.redirect('/my/tasks')
 
-    def _get_allowed_projects(self, user):
-        allowed_projects = request.env['project.project'].sudo().search([
-            ('user_id', '=', user.id), 
-            ('sale_order_id.order_line.product_id.name', '=', 'Support contract')
-        ])
-        return allowed_projects
+    def _get_allowed_projects(self, page=1, date_begin=None, date_end=None, sortby=None, **kw):
+        values = self._prepare_portal_layout_values()
+        Project = request.env['project.project']
+        domain = self._prepare_project_domain()
 
+        searchbar_sortings = self._prepare_searchbar_sortings()
+        if not sortby:
+            sortby = 'date'
+        order = searchbar_sortings[sortby]['order']
+
+        if date_begin and date_end:
+            domain += [('create_date', '>', date_begin), ('create_date', '<=', date_end)]
+
+        # Fetch projects based on the domain and orders
+        project_ids = Project.search(domain).mapped('id')
+
+        # Apply additional filtering criteria
+        allowed_projects = Project.sudo().search([
+            ('id', 'in', project_ids),
+            ('sale_order_id.order_line.product_id.name', '=', 'Support contract')
+        ], order=order)
+
+        return allowed_projects
 # from odoo import http
 # from odoo.http import request
 
