@@ -2,7 +2,7 @@
 {
     'name': "inspire_approval",
 
-    'summary': "Purchases Approvals",
+    'summary': "Purchases Approvals cycle",
 
     'description': """
 Long description of module's purpose
